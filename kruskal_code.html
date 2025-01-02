@@ -1,0 +1,137 @@
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS Algorithm Code</title>
+
+    <!-- Prism.js CSS for Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #263238;
+            color: #eceff1;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        code {
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        }
+
+        /* Media Query for Laptops */
+        @media (max-width: 1024px) {
+            body {
+                margin: 15px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            pre {
+                font-size: 14px;
+            }
+        }
+
+        /* Media Query for Phones */
+        @media (max-width: 480px) {
+            body {
+                margin: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            pre {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>BFS Algorithm Code</h1>
+
+<pre class="language-cpp" tabindex="0"><code class="language-cpp">class ResourceSharingManager {
+private:
+    vector<tuple<int, int, int>> edges;
+    vector<int> parent;
+    vector<int> rank;
+
+    int find(int node) {
+        if (parent[node] != node)
+            parent[node] = find(parent[node]);
+        return parent[node];
+    }
+
+    void unite(int u, int v) {
+        int rootU = find(u);
+        int rootV = find(v);
+        if (rootU != rootV) {
+            if (rank[rootU] > rank[rootV]) {
+                parent[rootV] = rootU;
+            } else if (rank[rootU] < rank[rootV]) {
+                parent[rootU] = rootV;
+            } else {
+                parent[rootV] = rootU;
+                rank[rootU]++;
+            }
+        }
+    }
+
+public:
+    ResourceSharingManager(int n) : parent(n), rank(n, 0) {
+        for (int i = 0; i < n; ++i)
+            parent[i] = i;
+    }
+
+    void addEdge(int u, int v, int weight) {
+        edges.emplace_back(u, v, weight);
+    }
+
+    void computeMST() {
+        sort(edges.begin(), edges.end(), [](const auto& a, const auto& b) {
+            return get<2>(a) < get<2>(b);
+        });
+
+        cout << "Kruskal's MST:\n";
+        int mstWeight = 0;
+        for (const auto& [u, v, weight] : edges) {
+            if (find(u) != find(v)) {
+                cout << u << " - " << v << " (Weight: " << weight << ")\n";
+                unite(u, v);
+                mstWeight += weight;
+            }
+        }
+        cout << "Total Weight of MST: " << mstWeight << "\n";
+    }
+};</wastecategory></code></pre>
+
+<!-- Prism.js for Syntax Highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-cpp.min.js"></script>
+
+
+
+</body></html>
