@@ -1,0 +1,318 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT/BT Sector Management in Tech City</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a0072;
+            animation: fadeIn 2s;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        h1:before {
+            content: '\f0e8';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #4a0072;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #4a0072;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        td:first-child {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        td i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Hover Effect for Table Rows */
+        tr {
+            transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: #d1b0e7;
+            cursor: pointer;
+            border: 2px solid #4a0072;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Updated "View Code" Button Styling */
+        .view-button {
+            background-color: #4a0072;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .view-button:hover {
+            background-color: #300046;
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+        }
+
+        .view-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .view-button:hover i {
+            transform: rotate(15deg); /* Rotate icon slightly on hover */
+        }
+
+        /* Next Page Button Styling */
+        .next-button {
+            display: inline-block;
+            background-color: #4a0072;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .next-button:hover {
+            background-color: #300046;
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+        }
+
+        .next-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .next-button:hover i {
+            transform: translateX(5px); /* Slide arrow icon to the right */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>IT/BT Sector Management in Tech City</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Algorithm/Data Structure</th>
+            <th>Use Case</th>
+            <th>Related SDGs</th>
+            <th>View Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <i class="fas fa-network-wired"></i>
+                <strong>Optimizing Network Infrastructure</strong>
+            </td>
+            <td>Dijkstra's Algorithm</td>
+            <td>Efficient routing of data in IT networks to minimize latency.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+                </ul>
+            </td>
+            <td>
+                 <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Dijkstra Algorithm.html" class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-search"></i>
+                <strong>Resource Allocation</strong>
+            </td>
+            <td>AVL Trees</td>
+            <td>Efficient storage and retrieval of server resources in IT systems.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+                </ul>
+            </td>
+            <td>
+                 <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/AVL Tree.html" class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-robot"></i>
+                <strong>AI for Job Matching</strong>
+            </td>
+            <td>KMP String Matching</td>
+            <td>Efficiently matching job seekers with relevant IT opportunities.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 8:</strong> Decent Work and Economic Growth</li>
+                </ul>
+            </td>
+            <td>
+            
+                     <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/KMP String Matching.html" class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-chart-line"></i>
+                <strong>Demand Prediction</strong>
+            </td>
+            <td>Segment Trees</td>
+            <td>Forecasting IT service demand in urban areas.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+                </ul>
+            </td>
+            <td>
+                <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Segment Tree.html" class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-recycle"></i>
+                <strong>Startup Collaboration</strong>
+            </td>
+            <td>Kruskal's Algorithm</td>
+            <td>Connecting IT startups through optimized collaborative networks.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+                    <li><strong>SDG 17:</strong> Partnerships for the Goals</li>
+                </ul>
+            </td>
+            <td>
+             
+                 <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Kruskal's Algorithm Code.html" class="view-button">
+                
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-database"></i>
+                <strong>Data Storage Optimization</strong>
+            </td>
+            <td>HashMaps</td>
+            <td>Efficient data retrieval for large-scale IT systems.</td>
+            <td>
+                <ul>
+                    <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
+                </ul>
+            </td>
+            <td>
+               
+                      <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Hash Maps.html" class="view-button">
+                
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="next-page-btn" style="text-align: center; margin-top: 20px;">
+    
+           <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Business cases/water management.html" class="next-button">
+        <i class="fas fa-arrow-right"></i> Next Page
+    </a>
+</div>
+
+
+
+
+</body></html>
