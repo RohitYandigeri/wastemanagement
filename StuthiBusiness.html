@@ -1,0 +1,183 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Business Cases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(45deg, #0066cc, #003399);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        thead {
+            background: #003399;
+            color: #fff;
+        }
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            font-weight: 700;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tbody tr:hover {
+            background: #f0f0f0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #222;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+            table td, table th {
+                display: block;
+                text-align: left;
+                padding: 0.5rem;
+            }
+            table thead {
+                display: none;
+            }
+            table tr {
+                display: block;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 1rem;
+            }
+            table tr td:first-child {
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-city"></i> Smart City Plan: Business Case Studies</h1>
+    </header>
+
+    <div class="container">
+        <h2>Transportation and Tourism</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sub-Group</th>
+                    <th>Algorithm</th>
+                    <th>Description</th>
+                    <th>SDG Goals</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-road"></i> Traffic Management</td>
+                    <td>Dijkstra's Algorithm</td>
+                    <td>Optimizes route planning to reduce congestion and travel time, ensuring smoother traffic flow and enhanced urban mobility.</td>
+                    <td>9 (Industry, Innovation, and Infrastructure), 11 (Sustainable Cities and Communities)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/dijstra.html">View Code</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-map"></i> Tourism Recommendations</td>
+                    <td>Tries</td>
+                    <td>Provides location-based suggestions using keywords and preferences, offering personalized and relevant travel recommendations.</td>
+                    <td>9 (Industry, Innovation, and Infrastructure), 11 (Sustainable Cities and Communities)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/tries.html">View Code</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-clock"></i> Public Transport Scheduling</td>
+                    <td>Segment Trees</td>
+                    <td>Manages real-time scheduling of buses and trains, enabling dynamic adjustments for optimized public transport availability.</td>
+                    <td>9 (Industry, Innovation, and Infrastructure), 11 (Sustainable Cities and Communities)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/segmentTrees.html">View Code</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Safety and Security</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sub-Group</th>
+                    <th>Algorithm</th>
+                    <th>Description</th>
+                    <th>SDG Goals</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-video"></i> Surveillance</td>
+                    <td>AVL Trees</td>
+                    <td>Manages a dynamic database of surveillance footage, enhancing security operations through efficient data handling.</td>
+                    <td>9 (Industry, Innovation, and Infrastructure), 16 (Peace, Justice, and Strong Institutions)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/avl.html">View Code</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-ambulance"></i> Emergency Response</td>
+                    <td>Breadth-First Search (BFS)</td>
+                    <td>Ensures rapid deployment of emergency vehicles by finding the shortest paths during critical situations.</td>
+                    <td>3 (Good Health and Well-being), 11 (Sustainable Cities and Communities)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/bfs.html">View Code</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-lock"></i> Cybersecurity</td>
+                    <td>KMP Algorithm</td>
+                    <td>Detects patterns of cyberattacks efficiently, bolstering cybersecurity defenses and mitigating potential threats.</td>
+                    <td>9 (Industry, Innovation, and Infrastructure), 16 (Peace, Justice, and Strong Institutions)</td>
+                    <td><a href="https://ErannaTP.github.io/Portfolio/kmp.html">View Code</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Smart City Plan © 2024 | Designed by Eranna Patil</p>
+    </footer>
+
+
+</body></html>
