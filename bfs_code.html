@@ -1,0 +1,132 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS Algorithm Code</title>
+
+    <!-- Prism.js CSS for Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background: #263238;
+            color: #eceff1;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        code {
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        }
+
+        /* Media Query for Laptops */
+        @media (max-width: 1024px) {
+            body {
+                margin: 15px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            pre {
+                font-size: 14px;
+            }
+        }
+
+        /* Media Query for Phones */
+        @media (max-width: 480px) {
+            body {
+                margin: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            pre {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>BFS Algorithm Code</h1>
+
+<pre class="language-cpp" tabindex="0"><code class="language-cpp">class WasteClassifier {
+private:
+    struct WasteCategory {
+        string type;
+        string process;
+
+        WasteCategory(string type, string process) : type(type), process(process) {}
+    };
+
+    vector<wastecategory> categories;
+
+public:
+    void addCategories() {
+        int n;
+        cout &lt;&lt; "Enter the number of waste categories: ";
+        cin &gt;&gt; n;
+
+        for (int i = 0; i &lt; n; ++i) {
+            string type, process;
+            cout &lt;&lt; "Enter Waste Type and Process: ";
+            cin &gt;&gt; type &gt;&gt; process;
+            categories.emplace_back(type, process);
+        }
+    }
+
+    void classifyWaste() {
+        sort(categories.begin(), categories.end(), [](const WasteCategory&amp; a, const WasteCategory&amp; b) {
+            return a.type &lt; b.type;
+        });
+
+        cout &lt;&lt; "Sorted Waste Categories:\n";
+        for (const auto&amp; category : categories) {
+            cout &lt;&lt; "Type: " &lt;&lt; category.type &lt;&lt; ", Process: " &lt;&lt; category.process &lt;&lt; "\n";
+        }
+
+        string query;
+        cout &lt;&lt; "Enter the waste type to classify: ";
+        cin &gt;&gt; query;
+
+        auto it = find_if(categories.begin(), categories.end(), [&amp;](const WasteCategory&amp; c) {
+            return c.type == query;
+        });
+
+        if (it != categories.end()) {
+            cout &lt;&lt; "Query Result: Waste Type: " &lt;&lt; query &lt;&lt; " -&gt; Process: " &lt;&lt; it-&gt;process &lt;&lt; "\n";
+        } else {
+            cout &lt;&lt; "Query Result: Waste Type " &lt;&lt; query &lt;&lt; " not found in categories.\n";
+        }
+    }
+};</wastecategory></code></pre>
+
+<!-- Prism.js for Syntax Highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-cpp.min.js"></script>
+
+
+
+</body></html>
